@@ -13,8 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 from datetime import timedelta
-import django_heroku
-import dj_database_url
+# import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,8 +28,7 @@ SECRET_KEY = 'django-insecure-0ndq*a8bbpm(z#)x_%b%*1_pmh8)2a9z^c)l+flu0s=*xiwfhg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['127.0.0.1','localhost','proshop-01.herokuapp.com']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','proshop-01.herokuapp.com']
 
 
 # Application definition
@@ -132,18 +130,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'proshop',
-#         'USER': 'postgres',
-#         'PASSWORD': os.environ.get('DB_PASS'),
-#         'HOST': 'localhost',
-#         'PORT': '5432'
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'proshop',
+        'USER': 'postgres',
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
 }
 
 
@@ -184,14 +179,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = '/images/'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'static',
-#     BASE_DIR / 'frontend/build/static',
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+    BASE_DIR / 'frontend/build/static',
 
-# ]
+]
 
 MEDIA_ROOT= BASE_DIR / 'static/images'
-# STATIC_ROOT= BASE_DIR / 'staticfiles'
+STATIC_ROOT= BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -200,8 +195,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS=True
 
-STATIC_ROOT =os.path.join(BASE_DIR,'static')
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
-# if os.getcwd() == '/app':
-#     DEBUG = False
+if os.getcwd() == '/app':
+    DEBUG = False

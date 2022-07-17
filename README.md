@@ -2,6 +2,8 @@
 
 Django + React full stack ecommerce website
 
+I have used sql database and heroku app for deployment.
+
 ![image](https://user-images.githubusercontent.com/81713374/179392062-6fcec2e2-8b63-4f65-bd76-823d1027ad50.png)
 
 It includes the following features:
@@ -30,5 +32,3 @@ It includes the following features:
   
   l) PayPal / credit card integration
 
-
-I have used sql database and heroku app for deployment.

@@ -30,3 +30,5 @@ It includes the following features:
   
   l) PayPal / credit card integration
 
+
+I have used sql database and heroku app for deployment.

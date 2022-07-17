@@ -2,21 +2,31 @@
 
 Django + React full stack ecommerce website
 
+![image](https://user-images.githubusercontent.com/81713374/179392062-6fcec2e2-8b63-4f65-bd76-823d1027ad50.png)
+
 It includes the following features:
 
-  Full featured shopping cart
+  a) Full featured shopping cart
   
-  Product reviews and ratings
+  b) Product reviews and ratings
   
-  Top products carousel
-  Product pagination
-  Product search feature
-  User profile with orders
-  Admin product management
-  Admin user management
-  Admin Order details page
-  Mark orders as delivered option
-  Checkout process (shipping, payment method, etc)
-  PayPal / credit card integration
+  c) Top products carousel
+  
+  d) Product pagination
+  
+  e) Product search feature
+  
+  f) User profile with orders
+  
+  g) Admin product management
+  
+  h) Admin user management
+  
+  i) Admin Order details page
+  
+  j) Mark orders as delivered option
+  
+  k) Checkout process (shipping, payment method, etc)
+  
+  l) PayPal / credit card integration
 
-![image](https://user-images.githubusercontent.com/81713374/179392062-6fcec2e2-8b63-4f65-bd76-823d1027ad50.png)
